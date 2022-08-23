@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/MikeMelgren/notification-bot/issues"
   },
-  "homepage": "https://github.com/MikeMelgren/notification-bot#readme"
+  "homepage": "https://github.com/MikeMelgren/notification-bot#readme",
+  "dependencies": {
+    "discord.js": "^14.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0"
+  }
 }
