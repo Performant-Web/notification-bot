@@ -15,15 +15,27 @@ client.on('messageCreate', message => {
     const imgSize = 80;
 
     const data = {
-        username: message.author.username,
-        userImg: `https://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}.webp?size=${imgSize}`,
-        message: message.content,
-        messageImg: (attachments.length) ? attachments[0].url : null,
-        server: message.guild.name,
-        serverImg: `https://cdn.discordapp.com/icons/${message.guild.id}/${message.guild.icon}.webp?size=${imgSize}`,
-        channel: message.channel.name,
-        createdAt: message.createdAt,
-        };
+        message: {
+            content: message.content,
+            id: message.id,
+            img: (attachments.length) ? attachments[0].url : null,
+            createdAt: message.createdAt,
+        },
+        user: {
+            name: message.author.username,
+            id: message.author.id,
+            img: `https://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}.webp?size=${imgSize}`,
+        },
+        server: {
+            name: message.guild.name,
+            id: message.guildId,
+            img: `https://cdn.discordapp.com/icons/${message.guild.id}/${message.guild.icon}.webp?size=${imgSize}`,
+        },
+        channel: {
+            name: message.channel.name,
+            id: message.channelId,
+        },
+    };
 
     console.log(data);
 
