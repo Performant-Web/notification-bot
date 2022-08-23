@@ -16,24 +16,24 @@ client.on('messageCreate', message => {
 
     const data = {
         message: {
-            content: message.content,
             id: message.id,
+            content: message.content,
             img: (attachments.length) ? attachments[0].url : null,
             createdAt: message.createdAt,
         },
         user: {
-            name: message.author.username,
             id: message.author.id,
+            name: message.author.username,
             img: `https://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}.webp?size=${imgSize}`,
         },
         server: {
-            name: message.guild.name,
             id: message.guildId,
+            name: message.guild.name,
             img: `https://cdn.discordapp.com/icons/${message.guild.id}/${message.guild.icon}.webp?size=${imgSize}`,
         },
         channel: {
-            name: message.channel.name,
             id: message.channelId,
+            name: message.channel.name,
         },
     };
 
