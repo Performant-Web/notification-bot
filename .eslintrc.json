@@ -38,10 +38,6 @@
             "property"
         ],
         "handle-callback-err": "off",
-        "indent": [
-            "error",
-            "tab"
-        ],
         "keyword-spacing": "error",
         "max-nested-callbacks": [
             "error",
