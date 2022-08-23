@@ -1,0 +1,24 @@
+{
+  "name": "notification-bot",
+  "version": "1.0.0",
+  "description": "Discord bot to provide push notifications for large servers",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeMelgren/notification-bot.git"
+  },
+  "keywords": [
+    "Discord",
+    "Notification",
+    "Bot"
+  ],
+  "author": "Performant Web",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikeMelgren/notification-bot/issues"
+  },
+  "homepage": "https://github.com/MikeMelgren/notification-bot#readme"
+}
