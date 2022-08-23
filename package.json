@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/MikeMelgren/notification-bot#readme",
   "dependencies": {
-    "discord.js": "^14.3.0"
+    "discord.js": "^14.3.0",
+    "dotenv": "^16.0.1"
   },
   "devDependencies": {
     "eslint": "^8.22.0"
