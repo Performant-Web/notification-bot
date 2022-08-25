@@ -4,7 +4,7 @@
   "description": "Discord bot to provide push notifications for large servers",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,12 @@
   "homepage": "https://github.com/MikeMelgren/notification-bot#readme",
   "dependencies": {
     "@discordjs/rest": "^1.1.0",
+    "body-parser": "^1.19.2",
     "discord.js": "^14.3.0",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "eslint": "^8.22.0",
+    "express": "^4.17.3",
+    "web-push": "^3.4.5"
   },
   "devDependencies": {
     "eslint": "^8.22.0"
