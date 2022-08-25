@@ -1,4 +1,8 @@
 require('dotenv').config();
+const express = require('express');
+const webpush = require('web-push');
+const bodyParser = require('body-parser');
+const path = require('path');
 const { Client, GatewayIntentBits } = require('discord.js');
 const { TOKEN } = process.env;
 
@@ -8,12 +12,16 @@ client.once('ready', c => {
 	console.log(`Ready! Logged in as ${c.user.tag}`);
 });
 
+let subscription = '';
+let payload = '';
+
+function push() {
+    webpush.sendNotification(subscription, payload).catch(console.log);
+}
+
 client.on('messageCreate', message => {
-
     const attachments = message.attachments.map(i => i);
-
-    const imgSize = 80;
-
+    const imgSize = 96;
     const data = {
         message: {
             id: message.id,
@@ -36,9 +44,39 @@ client.on('messageCreate', message => {
             name: message.channel.name,
         },
     };
-
     console.log(data);
+    // Refactor so payload is created directly from message
+    payload = JSON.stringify({
+        title: data.user.name,
+        body: data.message.content,
+        icon: data.user.img,
+        image: data.message.img,
+        url: `https://discord.com/channels/${data.server.id}/${data.channel.id}/${data.message.id}`,
+    });
+    push();
 
 });
 
 client.login(TOKEN);
+
+const app = express();
+
+app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, 'client')));
+
+const publicVapidKey = process.env.PUBLIC_KEY;
+const privateVapidKey = process.env.PRIVATE_KEY;
+
+webpush.setVapidDetails('mailto:test@test.com', publicVapidKey, privateVapidKey);
+
+app.post('/subscribe', (req, res) => {
+    subscription = req.body;
+    res.status(201).json({});
+});
+
+const PORT = 5000;
+
+app.listen(PORT, () => {
+    console.log('Server started on port http://localhost:' + PORT);
+});
