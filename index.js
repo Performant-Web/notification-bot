@@ -63,7 +63,6 @@ client.login(TOKEN);
 const app = express();
 
 app.use(bodyParser.json());
-
 app.use(express.static(path.join(__dirname, 'client')));
 
 const publicVapidKey = process.env.PUBLIC_KEY;
