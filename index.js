@@ -71,7 +71,7 @@ const privateVapidKey = process.env.PRIVATE_KEY;
 
 webpush.setVapidDetails('mailto:test@test.com', publicVapidKey, privateVapidKey);
 
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
     res.status(200);
 });
 
