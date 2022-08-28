@@ -16,6 +16,5 @@
     "start_url": "/?source=pwa",
     "display": "standalone",
     "scope": "/",
-    "prefer_related_applications": false,
     "description": "A bot that sends push notifications for discord servers"
 }
