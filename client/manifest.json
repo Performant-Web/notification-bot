@@ -1,0 +1,21 @@
+{
+    "short_name": "Notification Bot",
+    "name": "Notification Bot for Discord",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/?source=pwa",
+    "display": "standalone",
+    "scope": "/",
+    "prefer_related_applications": false,
+    "description": "A bot that sends push notifications for discord servers"
+}
