@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const { Client, GatewayIntentBits } = require('discord.js');
 const { TOKEN } = process.env;
+const PORT = process.env.PORT || 5000;
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
@@ -78,8 +79,6 @@ app.post('/subscribe', (req, res) => {
     subscription = req.body;
     res.status(201).json({});
 });
-
-const PORT = 5000;
 
 app.listen(PORT, () => {
     console.log('Server started on port http://localhost:' + PORT);
