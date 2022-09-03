@@ -58,11 +58,11 @@ self.addEventListener('push', (event) => {
 self.addEventListener('notificationclick', (event) => {
     // clicking anywhere on notification
     event.notification.close();
-    clients.openWindow(`/?url=${event.notification.data.url}`);
+    clients.openWindow(event.notification.data.url);
     // clicking action button - can add more if needed, maybe dependent on user agent
     switch (event) {
       case 'open_url':
-      clients.openWindow(`/?url=${event.notification.data.url}`);
+      clients.openWindow(event.notification.data.url);
       break;
     }
   }
