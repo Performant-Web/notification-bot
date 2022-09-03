@@ -75,9 +75,32 @@ app.get('/', (req, res) => {
     // res.render('index');
 });
 
-app.get('/redirect', (req, res) => {
+app.get('/redirect1', (req, res) => {
     res.status(200);
-    res.sendFile(path.join(__dirname, '/redirect.html'));
+const url = 'discord://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+    res.redirect(url);
+    // res.sendFile(path.join(__dirname, '/redirect.html'));
+});
+
+app.get('/redirect2', (req, res) => {
+    res.status(200);
+    const url = 'https://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+res.redirect(url);
+    // res.sendFile(path.join(__dirname, '/redirect.html'));
+});
+
+app.get('/redirect3', (req, res) => {
+    res.status(200);
+const url = 'discord://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+    res.redirect(url);
+    // res.sendFile(path.join(__dirname, '/redirect.html'));
+});
+
+app.get('/redirect4', (req, res) => {
+    res.status(200);
+const url = 'https://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+    res.redirect(url);
+    // res.sendFile(path.join(__dirname, '/redirect.html'));
 });
 
 app.post('/subscribe', (req, res) => {

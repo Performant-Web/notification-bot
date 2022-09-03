@@ -7,6 +7,8 @@ window.onload = (event) =>{
     window.location.assign(url);
 };
 
+// MAYBE USE REPLACE OVER ASSIGN
+
 /*
 window.addEventListener('load', (event) =>{
 
