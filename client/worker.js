@@ -3,6 +3,7 @@ const cacheFiles = [
     '/',
     '/index.html',
     '/redirect.html',
+    '/redirect.js',
     '/client.js',
     '/android-chrome-192x192.png',
     '/android-chrome-512x512.png',
