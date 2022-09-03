@@ -2,8 +2,17 @@
 const url = 'discord://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
 // const url = 'discord://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
 // const url = 'https://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+/*
+let requesting = browser.permissions.request(
+    permissions
+  )
+  */
 
-window.open('discord://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786', '_system');
+  console.log(navigator.browserSettings)
+setTimeout(()=> {
+    window.open('discord://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786', '_system');
+
+},3000)
 
 /*
 window.onload = (event) =>{
