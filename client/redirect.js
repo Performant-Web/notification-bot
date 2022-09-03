@@ -8,17 +8,6 @@ let requesting = browser.permissions.request(
   )
   */
 
-setTimeout(()=> {
-    window.location.assign(url);
-},10000)
-
-/*
-window.onload = (event) =>{
-    window.location.assign(url);
-};
-*/
-
-// MAYBE USE REPLACE OVER ASSIGN
 
 /*
 window.addEventListener('load', (event) =>{
@@ -28,22 +17,6 @@ window.addEventListener('load', (event) =>{
 });
 */
 
-function one() {
-    window.location.assign(url);
-}
-
-function two() {
-    window.location.href = url;
-}
-
-function three() {
-    window.open(url);
-}
-
-function four() {
-    document.location.assign(url);
-}
-
-function five() {
-    document.location.href = url;
+function redirect() {
+    window.location.replace(url);
 }
