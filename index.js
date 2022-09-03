@@ -72,7 +72,12 @@ webpush.setVapidDetails('mailto:test@test.com', publicVapidKey, privateVapidKey)
 
 app.get('/', (req, res) => {
     res.status(200);
-    res.render('index');
+    // res.render('index');
+});
+
+app.get('/redirect', (req, res) => {
+    res.status(200);
+    res.sendFile(path.join(__dirname, '/redirect.html'));
 });
 
 app.post('/subscribe', (req, res) => {
