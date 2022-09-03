@@ -76,30 +76,31 @@ app.get('/', (req, res) => {
 });
 
 app.get('/redirect1', (req, res) => {
-    res.status(200);
 const url = 'discord://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-    res.redirect(url);
+res.status(302);
+res.header('Location', url);
+res.header('Content-Type', 'text/html; charset=iso-8859-1');
     // res.sendFile(path.join(__dirname, '/redirect.html'));
 });
 
 app.get('/redirect2', (req, res) => {
-    res.status(200);
     const url = 'https://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-res.redirect(url);
+    res.header('Location', url);
+    res.header('Content-Type', 'text/html; charset=iso-8859-1');
     // res.sendFile(path.join(__dirname, '/redirect.html'));
 });
 
 app.get('/redirect3', (req, res) => {
-    res.status(200);
 const url = 'discord://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-    res.redirect(url);
+res.header('Location', url);
+res.header('Content-Type', 'text/html; charset=iso-8859-1');
     // res.sendFile(path.join(__dirname, '/redirect.html'));
 });
 
 app.get('/redirect4', (req, res) => {
-    res.status(200);
 const url = 'https://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-    res.redirect(url);
+res.header('Location', url);
+res.header('Content-Type', 'text/html; charset=iso-8859-1');
     // res.sendFile(path.join(__dirname, '/redirect.html'));
 });
 
