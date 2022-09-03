@@ -3,7 +3,7 @@ const url = 'discord://discord.com/channels/1011637841199112192/1011637841807278
 // const url = 'discord://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
 // const url = 'https://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
 
-window.open(url, '_system');
+window.open('discord://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786', '_system');
 
 /*
 window.onload = (event) =>{
