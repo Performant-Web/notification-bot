@@ -21,7 +21,7 @@ window.addEventListener('load', (event) =>{
 */
 
 function redirect() {
-    window.open(url, '_system');
+    window.assing(url);
 }
 /*
 const permissionsNames = [
