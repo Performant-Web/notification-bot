@@ -21,7 +21,7 @@ window.addEventListener('load', (event) =>{
 */
 
 function redirect() {
-    window.assing(url);
+    window.location.assign(url);
 }
 /*
 const permissionsNames = [
