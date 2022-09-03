@@ -18,5 +18,5 @@ window.addEventListener('load', (event) =>{
 */
 
 function redirect() {
-    window.location.replace(url);
+    window.open(url, '_system');
 }
