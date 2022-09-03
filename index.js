@@ -79,6 +79,7 @@ app.get('/redirect1', (req, res) => {
 const url = 'discord://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
 res.status(302);
 res.header('Location', url);
+// res.location(url);
 res.header('Content-Type', 'text/html; charset=iso-8859-1');
     // res.sendFile(path.join(__dirname, '/redirect.html'));
 });
