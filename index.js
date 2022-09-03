@@ -81,6 +81,7 @@ res.status(302);
 res.header('Location', url);
 // res.location(url);
 res.header('Content-Type', 'text/html; charset=iso-8859-1');
+res.end();
     // res.sendFile(path.join(__dirname, '/redirect.html'));
 });
 
@@ -89,6 +90,8 @@ app.get('/redirect2', (req, res) => {
     res.header('Location', url);
     res.header('Content-Type', 'text/html; charset=iso-8859-1');
     // res.sendFile(path.join(__dirname, '/redirect.html'));
+    res.end();
+
 });
 
 app.get('/redirect3', (req, res) => {
@@ -96,6 +99,8 @@ const url = 'discord://discord.com/channels/1011637841199112192/1011637841807278
 res.header('Location', url);
 res.header('Content-Type', 'text/html; charset=iso-8859-1');
     // res.sendFile(path.join(__dirname, '/redirect.html'));
+    res.end();
+
 });
 
 app.get('/redirect4', (req, res) => {
@@ -103,6 +108,8 @@ const url = 'https://discordapp.com/channels/1011637841199112192/101163784180727
 res.header('Location', url);
 res.header('Content-Type', 'text/html; charset=iso-8859-1');
     // res.sendFile(path.join(__dirname, '/redirect.html'));
+    res.end();
+
 });
 
 app.post('/subscribe', (req, res) => {
