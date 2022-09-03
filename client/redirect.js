@@ -9,7 +9,7 @@ let requesting = browser.permissions.request(
   */
 
 setTimeout(()=> {
-    window.open(url, '_system');
+    window.location.assign(url);
 },10000)
 
 /*

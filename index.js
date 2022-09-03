@@ -75,6 +75,15 @@ app.get('/', (req, res) => {
     // res.render('index');
 });
 
+app.get('/redirect', (req, res) =>{
+    const url = 'https://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+// const url = 'discord://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+// const url = 'discord://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+// const url = 'https://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+
+    res.redirect(url);
+})
+
 app.post('/subscribe', (req, res) => {
     subscription = req.body;
     res.status(201).json({});
