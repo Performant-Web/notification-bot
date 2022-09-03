@@ -3,9 +3,9 @@ const url = 'https://discord.com/channels/1011637841199112192/101163784180727808
 // const url = 'discord://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
 // const url = 'https://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
 
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = (event) =>{
     window.location.assign(url);
-}, false);
+};
 
 function one() {
     window.location.assign(url);
