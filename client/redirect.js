@@ -21,19 +21,19 @@ window.addEventListener('load', (event) =>{
 */
 
 function redirect1() {
-    window.location.assign(url1);
+    window.open(url1);
 }
 
 function redirect2() {
-    window.location.assign(url2);
+    window.open(url2);
 }
 
 function redirect3() {
-    window.location.assign(url3);
+    window.open(url3);
 }
 
 function redirect4() {
-    window.location.assign(url4);
+    window.open(url4);
 }
 /*
 const permissionsNames = [
