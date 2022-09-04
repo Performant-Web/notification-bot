@@ -1,17 +1,15 @@
-const url1 = 'https://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-const url2 = 'discord://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-const url3 = 'discord://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-const url4 = 'https://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+const mobile = 'https://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+const desktop = 'discord://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
 /*
 let requesting = browser.permissions.request(
     permissions
   )
   */
-/*
+
 setTimeout(() => {
-    redirect();
-}, 10000);
-*/
+    document.getElementById('mcheck').click();
+}, 1000);
+
 /*
 window.addEventListener('load', (event) =>{
 
@@ -20,69 +18,18 @@ window.addEventListener('load', (event) =>{
 });
 */
 
+function myFunction() {
+    document.getElementById('mycheck').click();
+}
+
+function mFunction() {
+    document.getElementById('mcheck').click();
+}
+
 function redirect1() {
-    window.open(url1);
+    window.open(mobile);
 }
 
 function redirect2() {
-    window.open(url2);
+    window.open(desktop);
 }
-
-function redirect3() {
-    window.open(url3);
-}
-
-function redirect4() {
-    window.open(url4);
-}
-/*
-const permissionsNames = [
-    "geolocation",
-    "notifications",
-    "push",
-    "midi",
-    "camera",
-    "microphone",
-    "speaker",
-    "device-info",
-    "background-fetch",
-    "background-sync",
-    "bluetooth",
-    "persistent-storage",
-    "ambient-light-sensor",
-    "accelerometer",
-    "gyroscope",
-    "magnetometer",
-    "clipboard",
-    "display-capture",
-    "nfc"
-  ]
-  
-  const getAllPermissions = async () => {
-    const allPermissions = []
-    // We use Promise.all to wait until all the permission queries are resolved
-    await Promise.all(
-      permissionsNames.map(async permissionName => {
-          try {
-            let permission
-            switch (permissionName) {
-              case 'push':
-                // Not necessary but right now Chrome only supports push messages with  notifications
-                permission = await navigator.permissions.query({name: permissionName, userVisibleOnly: true})
-                break
-              default:
-                permission = await navigator.permissions.query({name: permissionName})
-            }
-            console.log(permission)
-            allPermissions.push({permissionName, state: permission.state})
-          }
-          catch(e){
-            allPermissions.push({permissionName, state: 'error', errorMessage: e.toString()})
-          }
-      })
-    )
-    return allPermissions
-  }
-
-  console.log(getAllPermissions());
-  */
