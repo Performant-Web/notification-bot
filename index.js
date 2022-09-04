@@ -76,6 +76,26 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+
+app.get('/redirect1', (req, res) => {
+    const url1 = 'https://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+    res.redirect(url1);
+});
+app.get('/redirect2', (req, res) => {
+    const url2 = 'discord://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+    res.redirect(url2);
+});
+app.get('/redirect3', (req, res) => {
+    const url3 = 'discord://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+    res.redirect(url3);
+
+});
+app.get('/redirect4', (req, res) => {
+    const url4 = 'https://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+    res.redirect(url4);
+
+});
+
 app.get('/redirect', (req, res) => {
     res.sendFile(__dirname + '/client/redirect.html');
 });
