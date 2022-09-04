@@ -7,7 +7,7 @@ let requesting = browser.permissions.request(
   */
 
 setTimeout(() => {
-    document.getElementById('mcheck').click();
+    document.getElementById('mycheck').click();
 }, 1000);
 
 /*
