@@ -64,6 +64,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client')));
+app.set('view-engine', 'html');
 
 const publicVapidKey = process.env.PUBLIC_KEY;
 const privateVapidKey = process.env.PRIVATE_KEY;
@@ -72,17 +73,12 @@ webpush.setVapidDetails('mailto:test@test.com', publicVapidKey, privateVapidKey)
 
 app.get('/', (req, res) => {
     res.status(200);
-    // res.render('index');
+    res.render('index');
 });
 
-app.get('/redirect', (req, res) =>{
-    const url = 'https://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-// const url = 'discord://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-// const url = 'discord://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-// const url = 'https://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-
-    res.redirect(url);
-})
+app.get('/redirect', (req, res) => {
+    res.sendFile(__dirname + '/client/redirect.html');
+});
 
 app.post('/subscribe', (req, res) => {
     subscription = req.body;

@@ -1,7 +1,7 @@
-const url = 'https://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-// const url = 'discord://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-// const url = 'discord://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
-// const url = 'https://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+const url1 = 'https://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+const url2 = 'discord://discord.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+const url3 = 'discord://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
+const url4 = 'https://discordapp.com/channels/1011637841199112192/1011637841807278084/1015470189120331786'
 /*
 let requesting = browser.permissions.request(
     permissions
@@ -20,8 +20,20 @@ window.addEventListener('load', (event) =>{
 });
 */
 
-function redirect() {
-    window.location.assign(url);
+function redirect1() {
+    window.location.assign(url1);
+}
+
+function redirect2() {
+    window.location.assign(url2);
+}
+
+function redirect3() {
+    window.location.assign(url3);
+}
+
+function redirect4() {
+    window.location.assign(url4);
 }
 /*
 const permissionsNames = [
