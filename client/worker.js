@@ -64,7 +64,6 @@ self.addEventListener('notificationclick', (event) => {
 
 // Attempt to extract notification URL
 const url = `/redirect?url=${event.notification.data.url}`;
-console.log(url);
 
   // This looks to see if the current is already open and
   // focuses if it is
