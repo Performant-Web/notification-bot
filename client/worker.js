@@ -71,16 +71,13 @@ console.log(url);
   event.waitUntil(clients.matchAll({
     type: 'window',
   }).then((clientList) => {
-    console.log(clientList);
     for (const client of clientList) {
-      console.log(client);
       if (client) {
         client.navigate(url);
         client.focus();
       }
     }
     if (clients.openWindow) {
-      console.log('open');
       clients.openWindow(url);
     }
   }));
