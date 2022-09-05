@@ -76,7 +76,7 @@ console.log(url);
       console.log(client);
       if (client) {
         console.log('focus');
-        client.navigate(url);
+        client.navigate(event.notification.data.url);
         client.focus();
       }
     }
