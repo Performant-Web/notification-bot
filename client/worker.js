@@ -75,8 +75,7 @@ console.log(url);
     for (const client of clientList) {
       console.log(client);
       if (client) {
-        console.log('focus');
-        client.navigate(event.notification.data.url);
+        client.navigate(url);
         client.focus();
       }
     }

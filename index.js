@@ -52,7 +52,7 @@ client.on('messageCreate', message => {
         body: data.message.content,
         icon: data.user.img,
         image: data.message.img,
-        url: `https://discord.com/channels/${data.server.id}/${data.channel.id}/${data.message.id}`,
+        url: `discord://discord.com/channels/${data.server.id}/${data.channel.id}/${data.message.id}`,
     });
     push();
 
@@ -77,6 +77,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/redirect', (req, res) => {
+    res.status(200);
     res.sendFile(__dirname + '/client/redirect.html');
 });
 
